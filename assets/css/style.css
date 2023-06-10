@@ -21,21 +21,46 @@ body{
     background-color: #512DA8;
     grid-area: header;
     display: flex;
+    justify-content: space-between;
 }
-.header_logo{
-
+.header_logo {
+    display: flex;
+    align-items: center;
+}
+.header_logo span{
+    font-size: 40px;
+    
+    padding-right: 5px;
 }
 .header_menu{
-
+    font-size: 50px;
 }
 .aside{
     grid-area: aside;
     background-color: #673AB7;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+.aside_texto{
+    font-weight: 200;
+}
+
+.aside_orderby select{
+    height: 30px;
+    width: 300px;
 }
 .main{
     background-color: #D1C4E9;
     grid-area: main;
 }
+
+.car{
+    display: flex;
+}
+
+
 .footer{
     background-color: #673AB7;
     grid-area: footer;

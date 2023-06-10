@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio - Electric Car Store</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" />
     <script src="https://kit.fontawesome.com/a6a42315af.js" crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <div class="header_logo">hola</div>
-            <div class="header_menu"></div>
+            <div class="header_logo">
+                <span class="mdi mdi-car-back"></span>
+                <h3>Electric Cars</h3>
+            </div>
+            <div class="header_menu"><span class="mdi mdi-menu"></span></div>
         </div>
-        <div class="aside"></div>
-        <div class="main"></div>
+        <div class="aside">
+            <div class="aside_texto">
+                <p>Ordenar Por:</p>
+            </div>
+            <div class="aside_orderby">
+                <select name="orderby">
+                    <option value="price">Precio</option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="main">
+            <div class="car">
+                <div class="car_image"></div>
+                <div class="car_text">
+                    <p>Model: City Car</p>
+                </div>
+                <div class="car_button">
+                    <button type="button">Ver más</button>
+                </div>
+            </div>
+        </div>
         <div class="footer"></div>
     </div>
 </body>
+
 </html>
+<div></div>
