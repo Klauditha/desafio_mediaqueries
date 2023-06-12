@@ -12,7 +12,10 @@ body {
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1fr 20fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 4fr 0.5fr;
+  /*
+    grid-template-rows: 0.5fr 1fr 20fr 0.5fr;
+  */
   
 }
 
@@ -91,6 +94,10 @@ body {
   height: 30px;
   border-radius: 5px;
   border: 0;
+}
+
+#car02 , #car03, #car04, #car05, #car06, #car07, #car08{
+  display: none;
 }
 .footer {
   padding: 10px;
