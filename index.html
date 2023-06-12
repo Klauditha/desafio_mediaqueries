@@ -16,18 +16,38 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="header_logo">
-                <span class="mdi mdi-car-back"></span>
-                <h3>Electric Cars</h3>
+            <div class="header_logo_icono">
+                <div class="header_logo">
+                    <span class="mdi mdi-car-back"></span>
+                    <h3>Electric Cars</h3>
+                </div>
+                <div class="header_menu_icono">
+                    <span id="icon_burger" class="mdi mdi-menu"></span>
+                    
+                </div>
             </div>
-            <div class="header_menu"><span class="mdi mdi-menu"></span></div>
+            <div class="header_menu">
+                <div class="header_menu_text">
+                    <h3>Inicio</h3>
+                </div>
+                <div class="header_menu_text">
+                    <h3>Catálogo</h3>
+                </div>
+                <div class="header_menu_text">
+                    <h3>Ofertas</h3>
+                </div>
+                <div class="header_menu_text">
+                    <h3>Contactos</h3>
+                </div>
+            </div>
         </div>
+
         <div class="aside">
             <div class="aside_texto">
                 <p>Ordenar Por:</p>
             </div>
             <div class="aside_orderby">
-                <select name="orderby">
+                <select id="orderby">
                     <option value="price">Precio</option>
                     <option value="size">Tamaño</option>
                     <option value="color">Color</option>

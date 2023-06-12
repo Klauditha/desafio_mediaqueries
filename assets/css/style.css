@@ -22,6 +22,10 @@ body {
 .header {
   background-color: #512da8;
   grid-area: header;
+  
+}
+
+.header_logo_icono{
   display: flex;
   justify-content: space-between;
 }
@@ -29,13 +33,24 @@ body {
   display: flex;
   align-items: flex-start;
 }
+
 .header_logo span {
   font-size: 40px;
   padding-right: 5px;
 }
-.header_menu {
+
+.header_menu_icono {
   font-size: 50px;
 }
+
+.header_menu {
+  display: none;
+}
+
+.header_menu_text{
+  display: none;
+}
+
 .aside {
   grid-area: aside;
   background-color: #673ab7;
@@ -161,3 +176,64 @@ body {
     border: 2px solid black;
   }
  
+  /*MODO TABLET - OPCIONAL*/
+  /*
+  @media screen (min-width:576px , max-width: 992px) {
+    
+  }
+  */
+
+  /*MODO ESCRITORIO*/
+  @media screen and (min-width:576px) {
+    .container {
+      display: grid;
+      grid-template-areas:
+        'header aside'
+        'header main'
+        'footer main';
+      grid-template-columns: 1fr 6fr;
+      grid-template-rows: 0.5fr 9fr 0.5fr;
+    }
+    
+    #car02 , #car03, #car04, #car05, #car06, #car07, #car08{
+      display: flex;
+    }
+
+    #icon_burger{
+      display: none;
+    }
+    .aside {
+      height: 100px;
+    }
+
+    .aside_orderby select {
+      height: 30px;
+      width: 1000px;
+    }
+    
+    .header_menu{
+      display: flex;
+      flex-direction: column;
+    }
+    .header_menu_text{
+      display: grid;
+      font-size: 10px;
+    }
+    
+    .main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-content: center;
+      align-items: stretch;
+    }
+
+    .car {
+      width: 300px;
+      height: 350px;
+      
+    }
+
+    .pagination_section{
+      display:none;
+    }
+  }
