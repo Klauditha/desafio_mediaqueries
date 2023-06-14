@@ -1,10 +1,8 @@
 body {
-  /*max-width: 100%;
-  width: 375vh;*/
   margin: 0 auto;
   color: #fff;
-  /*height:100vh;*/
 }
+
 .container {
   display: grid;
   grid-template-areas:
@@ -21,7 +19,7 @@ body {
   grid-area: header;
 }
 
-.header_logo_icono{
+.header_logo_icono {
   display: flex;
   justify-content: space-between;
 }
@@ -44,7 +42,7 @@ body {
   display: none;
 }
 
-.header_menu_text{
+.header_menu_text {
   display: none;
 }
 
@@ -90,6 +88,7 @@ body {
 .car_image img {
   width: 150px;
 }
+
 .car_text {
   color: #512da8;
   margin: 10px;
@@ -104,14 +103,14 @@ body {
   border: 0;
 }
 
-.car_button button:hover{
-    background-color: #D1C4E9;
-    color:#000000;
+.car_button button:hover {
+  background-color: #d1c4e9;
+  color: #000000;
 }
 
-.car_button button:focus{
-    background-color: #757575;
-    color: #fff;
+.car_button button:focus {
+  background-color: #757575;
+  color: #fff;
 }
 
 .footer {
@@ -125,116 +124,126 @@ body {
   align-items: center;
 }
 
-.footer_icon {
+/* pagination position styling */
+.pagination_section {
+  position: relative;
+  font-size: 12px;
+  padding-top: 10px;
+  margin: 10px 0 px;
+  height: 30px;
 }
 
-.footer_text {
+/* pagination styling */
+.pagination_section a {
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
 }
 
- /* pagination position styling */
- .pagination_section {
-    position: relative;
-    font-size: 12px;
-    padding-top: 10px;
-    margin: 10px 0 px;
-    height: 30px;
-  }
- 
-  /* pagination styling */
-  .pagination_section a {
-    color: black;
-    padding: 10px 18px;
-    text-decoration: none;
-  }
- 
-  /* pagination hover effect on non-active */
-  .pagination_section a:hover:not(.active) {
-    background-color: #757575;
-    color: white;
-  }
- 
-  /* pagination hover effect on active*/
- 
-  a:nth-child(2) {
-    background-color: #ff4081;
-    color: white;
-  }
- 
-  a:nth-child(1) {
-    font-weight: bold;
-  }
- 
-  a:nth-child(7) {
-    font-weight: bold;
-  }
- 
-  .content {
-    margin: 50px;
-    padding: 15px;
-    width: 700px;
-    height: 200px;
-    border: 2px solid black;
-  }
- 
-  /*MODO TABLET - OPCIONAL*/
-  /*
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+  background-color: #757575;
+  color: white;
+}
+
+/* pagination hover effect on active*/
+a:nth-child(2) {
+  background-color: #ff4081;
+  color: white;
+}
+
+a:nth-child(1) {
+  font-weight: bold;
+}
+
+a:nth-child(7) {
+  font-weight: bold;
+}
+
+.content {
+  margin: 50px;
+  padding: 15px;
+  width: 700px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+/*MODO TABLET - OPCIONAL*/
+/*
   @media screen (min-width:576px , max-width: 992px) {
     
   }
   */
 
-  /*MODO ESCRITORIO*/
-  @media (min-width:576px) {
-    .container {
-      display: grid;
-      grid-template-areas:
-        'header aside'
-        'header main'
-        'footer main';
-      grid-template-columns: 1fr 6fr;
-      grid-template-rows: 0.5fr 3fr 0.5fr;
-    }
-
-    #icon_burger{
-      display: none;
-    }
-    .aside {
-      height: 100px;
-    }
-
-    .aside_orderby select {
-      height: 30px;
-      width: 1000px;
-    }
-
-    .header_menu{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-    }
-    .header_menu_text{
-      display: grid;
-      font-size: 10px;
-    }
-    
-    .main {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      align-content: start;
-      align-items: stretch;
-      gap:5px;
-    }
-
-    .car {
-      width: 250px;
-      height: 250px;
-    }
-
-    .car_image img {
-        width: 150px;
-      }
-    .pagination_section{
-      display:none;
-    }
+/*MODO ESCRITORIO*/
+@media (min-width: 576px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      'header aside'
+      'header main'
+      'footer main';
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 5.5fr 1fr;
   }
+
+  #icon_burger {
+    display: none;
+  }
+ .aside{
+    padding-bottom: 20px;
+ }
+  .aside_orderby select {
+    height: 30px;
+    width: 1000px;
+  }
+
+  .header_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:20px;
+  }
+  .header_menu_text {
+    display: grid;
+    font-size: 10px;
+  }
+
+  .header_menu_text a {
+    color: white;
+  }
+  .header_menu_text a:hover,
+  .header_menu_text a:focus {
+    color: #ff4081;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    align-items: stretch;
+    row-gap: 20px;
+    
+  }
+
+  .car {
+    width: 250px;
+    height: 280px;
+    border-radius: 20px;
+   
+    
+  }
+
+  .car_image img {
+    width: 150px;
+  }
+
+  .pagination_section {
+    display: none;
+  }
+
+  .footer_text {
+    text-align: center;
+  }
+}
