@@ -87,18 +87,12 @@ body {
   overflow-y: auto;
 }
 
-.car_image {
-}
 .car_image img {
   width: 150px;
-  
 }
 .car_text {
   color: #512da8;
   margin: 10px;
-}
-
-.car_button {
 }
 
 .car_button button {
@@ -108,6 +102,16 @@ body {
   height: 30px;
   border-radius: 5px;
   border: 0;
+}
+
+.car_button button:hover{
+    background-color: #D1C4E9;
+    color:#000000;
+}
+
+.car_button button:focus{
+    background-color: #757575;
+    color: #fff;
 }
 
 .footer {
