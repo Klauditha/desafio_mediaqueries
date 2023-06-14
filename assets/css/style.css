@@ -13,7 +13,7 @@ body {
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 0.5fr 10fr 0.5fr;
+  grid-template-rows: 0.3fr 0.5fr 10fr 0.5fr;
 }
 
 .header {
