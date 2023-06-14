@@ -9,9 +9,18 @@ body {
     'header'
     'aside'
     'main'
+    'pagination'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 0.3fr 0.5fr 10fr 0.5fr;
+  grid-template-rows: 0.3fr 0.5fr 10fr 0.2fr 0.5fr;
+}
+
+
+.pagination_section{
+  grid-area: pagination;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .header {
@@ -38,7 +47,7 @@ body {
   font-size: 50px;
 }
 
-.header_menu {
+.header_menu  {
   display: none;
 }
 
@@ -62,6 +71,7 @@ body {
   height: 30px;
   width: 300px;
 }
+
 .main {
   background-color: #d1c4e9;
   grid-area: main;
@@ -125,7 +135,6 @@ body {
   align-items: center;
 }
 
-/* pagination position styling */
 .pagination_section {
   position: relative;
   font-size: 12px;
@@ -134,30 +143,23 @@ body {
   height: 30px;
 }
 
-/* pagination styling */
 .pagination_section a {
   color: black;
   padding: 10px 18px;
   text-decoration: none;
 }
 
-/* pagination hover effect on non-active */
 .pagination_section a:hover:not(.active) {
   background-color: #757575;
   color: white;
 }
 
-/* pagination hover effect on active*/
 a:nth-child(2) {
   background-color: #ff4081;
   color: white;
 }
 
 a:nth-child(1) {
-  font-weight: bold;
-}
-
-a:nth-child(7) {
   font-weight: bold;
 }
 
@@ -170,62 +172,79 @@ a:nth-child(7) {
 }
 
 /*MODO TABLET - OPCIONAL*/
-
 @media (min-width: 576px) and (max-width: 991px) {
-    .container {
-        display: grid;
-        grid-template-areas:
-          'header header'
-          'aside main'
-          'footer footer';
-        grid-template-columns: 0.5fr 3fr;
-        grid-template-rows: 0.5fr 6fr 0.5fr;
-      }
+  .container {
+      display: grid;
+      grid-template-areas:
+        'header header'
+        'aside main'
+        'aside pagination'
+        'footer footer';
+      grid-template-columns: 0.5fr 3fr;
+      grid-template-rows: 0.5fr 6fr 0.3fr 0.5fr;
+    }
 
-      #icon_burger {
-        display: none;
-      }
-      .aside_orderby select {
-        height: 30px;
-        width: 100px;
-      }
-      .header_menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 10px;
-      }
+    .pagination_section{
+      grid-area: pagination;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
 
-      .header_menu_text {
-        display: grid;
-        font-size: 10px;
-      }
-    
-      .header_menu_text a {
-        color: white;
-      }
-      .header_menu_text a:hover,
-      .header_menu_text a:focus {
-        color: #ff4081;
-      }
-      .main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-content: center;
-        align-items: stretch;
-        row-gap: 10px;
-      }
-      .car {
-        width: 280px;
-        height: 280px;
-      }
-    
-      .car_image img {
-        width:180px;
-      }
-      .pagination_section {
-        align-items: center;
-      }
+    .aside_orderby select {
+      height: 30px;
+      width: 100px;
+    }
+    .header .header_menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 40px;
+    }
+
+    .header > .header_menu {
+      display:none;
+    }
+
+    .header_menu_text {
+      display: grid;
+      font-size: 10px;
+    }
+  
+    .header_logo_icono{
+      justify-content: space-around;
+    }
+    .header_menu_text a {
+      color: white;
+    }
+
+    .header_menu_text a:hover,
+    .header_menu_text a:focus {
+      color: #ff4081;
+    }
+
+    #icon_burger {
+      display: none;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-content: center;
+      align-items: stretch;
+      row-gap: 10px;
+    }
+    .car {
+      width: 280px;
+      height: 280px;
+    }
+  
+    .car_image img {
+      width:180px;
+    }
+    .pagination_section {
+      align-items: center;
+    }
 }
 
 /*MODO ESCRITORIO*/
@@ -240,9 +259,6 @@ a:nth-child(7) {
     grid-template-rows: 1fr 5.5fr 1fr;
   }
 
-  #icon_burger {
-    display: none;
-  }
   .aside {
     padding-bottom: 20px;
   }
@@ -258,6 +274,11 @@ a:nth-child(7) {
     justify-content: space-evenly;
     gap: 20px;
   }
+
+  .header_logo_icono .header_menu {
+    display:none;
+  }
+  
   .header_menu_text {
     display: grid;
     font-size: 10px;
@@ -266,11 +287,16 @@ a:nth-child(7) {
   .header_menu_text a {
     color: white;
   }
+
   .header_menu_text a:hover,
   .header_menu_text a:focus {
     color: #ff4081;
   }
 
+  #icon_burger {
+    display: none;
+  }
+  
   .main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
